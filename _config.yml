@@ -1,0 +1,93 @@
+---
+title: Indivisible MN03
+timezone: UTC
+collections:
+  successes:
+    title: Media Attention
+    output: true
+  posts:
+    title: Posts
+    output: true
+  representatives:
+    title: Representatives
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    is featured: false
+    main-image: 
+    call-script-text: 
+    event-start-date: 
+    event-end-date: 
+    Location: 
+    RSVP-link: 
+    layout: post
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: representatives
+  values:
+    phone-numbers:
+      office-name: "(000) 000-0000"
+    website: 
+- scope:
+    path: ''
+    type: successes
+  values:
+    is featured: false
+    main-image: 
+    layout: media-item
+- scope:
+    path: ''
+    type: calendar
+  values:
+    embed-code: 
+- scope:
+    path: ''
+    type: becomeAMember
+  values:
+    main-image: 
+    mailchimp-form-embed: 
+- scope:
+    path: ''
+    type: townhall
+  values:
+    main-image: 
+- scope:
+    path: ''
+    type: local_chapters
+  values:
+    main-image: 
+description: We are INDIVISIBLE MN 03.
+subtitle: 
+email: resist@indivisiblemn03.org
+baseurl: 
+url: 
+twitter_username: "/IndivisibleMN03"
+youtube_username: UCrQucdhURAIvR6GakfXTxAA
+facebook_username: IndivisibleMN03
+soundcloud_username: indivisible-mn03
+background-image: uploads/banner_indivisible_mn03_wide.png
+member-count: 1600
+footer-title: Spread the word. Help build a movement.
+markdown: kramdown
+gems:
+- jekyll-feed
+- jekyll-paginate
+- jekyll-sitemap
+paginate: 10
+paginate_path: "/blog/page:num/"
+exclude:
+- Gemfile
+- Gemfile.lock
+google_analytics: 
+theme: jekyll-theme-cayman

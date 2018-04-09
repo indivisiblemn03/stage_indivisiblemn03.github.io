@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+<div class="home">
+  <!-- HOMEPAGE HEADER -->
+
+  <div class="clearfix home-header-wrap" {% if site.background-image %}style="background-image: url('{{ site.background-image }}')"{% endif %}>
+
+    {% if site.background-image %}<div class="onionskin absolute"></div>{% endif %}
+
+    <div class="clearfix home-header container relative">
+
+      <!-- SUBTITLE -->
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mt-0 mb-0 {% if site.background-image %}text-white{% endif %}">{{ site.subtitle | escape }}</h1>
+        </div>
+      </div>
+
+      {% if page.content %}
+        <div class="spacer clearfix visible-sm-up"></div>
+        {{ content }}
+      {% endif %}
+
+    </div><!-- END HOME HEADER -->
+  </div><!-- END HOME HEADER WRAP -->
+
+  <!-- HOMEPAGE BODY -->
+  <div class="container">
+
+      <div class="hidden-sm-up">
+        <a href="/become-a-member.html" class="btn btn-danger btn-block">
+        	<strong>Become a Member</strong>
+				</a>
+      </div>
+			<div class="row">
+				<div class="col-sm-12">
+ 				 <p><strong>Indivisible MN03</strong> is a grass roots, constituent-led, all-volunteer group of people from across the political spectrum. We were inspired by the national Indivisible movement, which uses constituent power to influence legislators around the country and hold each Member of Congress accountable.</p>
+         <p>The national Indivisible movement was founded after the 2016 election to oppose the:
+          <ul>
+            <li>Trump Agenda</li>
+            <li>Degradation of truth</li>
+            <li>Rise of authoritarianism</li>
+          </ul>
+          </p>
+          <p>Indivisible MN03 resists the Trump Agenda by pressuring our member of Congress to support inclusion, tolerance, fairness, and equality, and to stand up against corruption and authoritarianism.</p>
+          <p>The principles of Indivisible National are outlined in the <a href="https://www.indivisible.org">Indivisible Guide</a>.</p>
+          <p>Get involved!
+            <ul>
+              <li>Sign up to receive our <a href="become-a-member.html">newsletter</a> and find out about resistance events.</li>
+              <li>Called the Congressman's office?  Share how it went by taking a minute to fill-out our <a href="/call_tracker.html">Call Tracker</a>.</li>
+            </ul>
+          </p>
+					<hr/>
+				</div>
+   	  </div>
+    	<div class="row">
+    		<div class="col-sm-12">
+					<h3 class="text-center">WE WANT A REPRESENTATIVE WHO WILL:</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+          <a href="/townhall.html">
+					     <img class="mx-auto d-block" src="uploads\town_hall_button.png"/>
+          </a>
+				</div>
+				<div class="col-sm-12 col-md-6">
+          <a href="https://projects.fivethirtyeight.com/congress-trump-score/erik-paulsen/">
+					       <img class="mx-auto d-block" src="uploads\trump_button.png"/>
+          </a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-md-6 vertical-center-parent">
+					<h4 class="text-center vertical-center-child-md">Constituents Deserve to be Heard!</h4>
+				</div>
+				<div class="col-sm-12 col-md-6 text-center">
+					<strong>Call Representative Erik Paulsen:</strong><br>
+					District Office: (952) 405-8510<br>
+					DC Office: (202) 225-2871
+				</div>
+			</div>
+      <!-- SUCCESSES AND MEMBER COUNT -->
+      <div class="row">
+				<div class="col-sm-12 hidden-xs-down text-center">
+				  	<hr/>
+					</div>
+			</div>
+     {% if site.successes %}
+			<div class="row">
+        <!-- SUCCESSES -->
+        <div class="col-sm-12">
+					<h5>Media Attention</h5>
+				</div>
+			</div>
+			<div class="row">
+				{% assign groups = site.successes|group_by_exp:"s","s['is featured']"|reverse %}
+				{% for group in groups %}
+					{% for success in group.items %}
+						<div class="col-sm-12 col-md-6">
+							{% include success-blurb.html %}
+						</div>
+					{% endfor %}
+				{% endfor %}
+			</div>
+			<div class="row">
+				<div class="col-sm-12 pagination">
+					<a href="/successes.html" class="btn btn-link btn-flush ml-auto">More Media Attention &rarr;</a>
+				</div>
+			</div><!-- END TEAM MEDIA -->
+		  {% endif %}
+    </div>
+  </div>
+</div>
